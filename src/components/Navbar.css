@@ -1,0 +1,29 @@
+nav{
+    background-color: rgb(176, 237, 143);
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-title{
+    padding-left: 15px;
+    font-size: 28px;
+    color: rgb(25, 33, 11);
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+li{
+    cursor: pointer;
+    padding-right: 20px;
+    color: rgb(76, 5, 5);
+    list-style: none;
+    font-size: 18px;
+}
+.nav-pass-png{
+    position: absolute;
+    margin: 10px 0 0 280px;
+}

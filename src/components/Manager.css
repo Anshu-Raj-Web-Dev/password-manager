@@ -1,0 +1,201 @@
+.manager-container {
+    margin-top: 25px;  
+    border: 1px solid black;
+    max-height: 550px;
+    padding: 20px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.title {
+    font-size: 25px;
+    margin: 0px 0 0 320px;
+}
+
+.inputs {
+    padding: 30px 0 0 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input::placeholder {
+    padding: 10px;
+}
+
+#website {
+    border-radius: 10px;
+    width: 700px;
+    height: 35px;
+    border: 1px solid green;
+}
+
+#username {
+    border-radius: 10px;
+    height: 35px;
+    width: 300px;
+    border: 1px solid green;
+}
+
+.relative {
+    position: relative;
+}
+
+#password {
+    height: 35px;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid green;
+}
+
+.show-hide {
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.username-password {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-left: 80px;
+}
+
+.save {
+    height: 40px;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(22, 168, 22);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin-top: 20px;
+    margin-left: 400px;
+    cursor: pointer;
+}
+
+.no-passwords {
+    font-size: 20px;
+    margin-left: 35px;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    /* overflow: scroll; */
+}
+
+.heading ul {
+    position: relative;
+    width: 840px;
+    background-color: green;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    display: flex;
+    gap: 165px;
+}
+
+.heading ul .site {
+    position: absolute;
+    margin-left: 160px;
+}
+
+.heading ul .username {
+    position: absolute;
+    margin-left: 362px;
+}
+
+.heading ul .password {
+    position: absolute;
+    margin-left: 545px;
+}
+
+.heading ul .action {
+    position: absolute;
+    margin-left: 730px;
+}
+
+.your-passwords {
+    padding: 25px;
+}
+
+.saved-passwords ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.saved-password-list {
+    position: relative;
+    border: 1px solid darkgreen;
+    color: black;
+    width: 860px;
+    border-radius: 10px;
+    padding: 10px 10px 10px 0;
+    background-color: greenyellow;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    /* gap: 155px; */
+}
+
+.saved-website {
+    margin-left: 30px;
+    width: 300px;
+    text-align: center;
+}
+
+.saved-username {
+    position: absolute;
+    width: 130px;
+    text-align: center;
+    margin-left: 340px;
+}
+.saved-password{
+    position: absolute;
+    margin-left: 520px;
+    width: 150px;
+    text-align: center;
+}
+.saved-action {
+    position: absolute;
+    margin-left: 675px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.delete {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

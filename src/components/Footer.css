@@ -1,0 +1,15 @@
+.container{
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(176, 237, 143);
+}
+.foot-pass-png{
+    position: absolute;
+    margin: 10px 0 0 20px;
+}
