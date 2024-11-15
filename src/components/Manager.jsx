@@ -27,7 +27,7 @@ const Manager = () => {
 
             toast('Password saved', {
                 position: "top-left",
-                autoClose: 5000,
+                autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -127,7 +127,7 @@ const Manager = () => {
                     <div className="relative">
                         <input value={form.password} onChange={handleChange} ref={passwordRef} type="password" name='password' id='password' placeholder='Password' />
                         <span className='show-hide' onClick={showPassword}>
-                            <img ref={ref} src="icons/show-btn.png" width={25} />
+                            <img ref={ref} src="icons/hide-btn.png" width={25} />
                         </span>
                     </div>
                 </div>
@@ -136,7 +136,7 @@ const Manager = () => {
             <button className='save' onClick={savePassword} >Save Password</button>
 
             <div className="your-passwords">
-                <h1>Your Passwords</h1>
+                <h1 className='your-passwords-h1'>Your Passwords</h1>
             </div>
             {passwordArray.length === 0 && <div className='no-passwords'>No Passwords to show</div>}
             {passwordArray.length != 0 &&
