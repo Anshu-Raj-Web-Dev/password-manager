@@ -68,19 +68,18 @@ const Manager = () => {
 
     return (
         <>
-{/*             <ToastContainer
-    position="top-right"
-    autoClose={5000}
-    hideProgressBar={false}
-    newestOnTop={false}
-    closeOnClick
-    rtl={false}
-    pauseOnFocusLoss={true}
-    draggable
-    pauseOnHover
-    theme="light"
-    transition="Bounce"
-/> */}
+<ToastContainer
+                position="top-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss={false}
+                draggable
+                pauseOnHover
+                theme="light"
+            />
 
 
             {/* Apply the blurred class to the main content */}
