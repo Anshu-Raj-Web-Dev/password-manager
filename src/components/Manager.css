@@ -9,7 +9,59 @@
     border-radius: 10px;
     overflow-y: scroll;
 }
+.popup {
+    position: fixed; /* Ensure it's positioned relative to the viewport */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 300px;
+    z-index: 10;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
 
+/* Style for the heading inside the popup */
+.popup h1 {  
+    margin: 20px;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    color: #8a8a8a;
+}
+
+/* Style for buttons inside the popup */
+.popup button {
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    bottom: 0;
+    margin: 20px;
+}
+
+/* Style for "Yes" button */
+.popup .yes {
+    left: 0;
+    background-color: #ff4c4c;
+}
+
+/* Style for "Cancel" button */
+.popup .cancel {
+    right: 0;
+    background-color: #007bff;
+}
+
+/* Blur effect for the main content */
+.blurred {
+    filter: blur(4px);
+    pointer-events: none; /* Disable interactions while blurred */
+}
 .title {
     font-size: 25px;
     margin: 0px 0 0 320px;
