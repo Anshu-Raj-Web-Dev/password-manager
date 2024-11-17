@@ -10,6 +10,9 @@ const Manager = () => {
     const passwordRef = useRef()
     const [form, setForm] = useState({ website: "", username: "", password: "" })
     const [passwordArray, setPasswordArray] = useState([])
+    const [showPopup, setShowPopup] = useState(false);
+const [selectedPasswordId, setSelectedPasswordId] = useState(null);
+
 
     useEffect(() => {
         let passwords = localStorage.getItem("passwords")
@@ -30,11 +33,18 @@ const Manager = () => {
         }
     };
 
-    const deletePassword = (id) => {
-        const updatedPasswords = passwordArray.filter((item) => item.id !== id);
-        setPasswordArray(updatedPasswords);
-        toast.info('Password deleted!', { position: 'top-left', autoClose: 1000 });
-    };
+    const confirmDeletePassword = (id) => {
+    setShowPopup(true);
+    setSelectedPasswordId(id);
+};
+
+    const deletePassword = () => {
+    const updatedPasswords = passwordArray.filter((item) => item.id !== selectedPasswordId);
+    setPasswordArray(updatedPasswords);
+    setShowPopup(false);
+    toast.info('Password deleted!', { position: 'top-left', autoClose: 1000 });
+};
+
 
     const editPassword = (id) => {
         setForm(passwordArray.filter(i => i.id === id)[0])
@@ -80,7 +90,7 @@ const Manager = () => {
             transition="Bounce"
         />
     <ToastContainer />
-        <div className='manager-container'>
+        <div className={`manager-container ${showPopup ? 'blurred' : ''}`}>
             <div className="title">
                 Your own Password Manager
             </div>
@@ -146,6 +156,14 @@ const Manager = () => {
                         </ul>
                     </div>
                 </div>}
+            {showPopup && (
+    <div className="popup">
+        <h1>Are you sure you want to delete this password?</h1>
+        <button className="yes" onClick={deletePassword}>Yes</button>
+        <button className="cancel" onClick={() => setShowPopup(false)}>Cancel</button>
+    </div>
+)}
+
         </div>
             </>
     )
