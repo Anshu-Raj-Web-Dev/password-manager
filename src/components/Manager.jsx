@@ -20,43 +20,21 @@ const Manager = () => {
 
 
     const savePassword = () => {
-        if (form.website.length > 0 && form.username.length > 0 && form.password.length > 0) {
-            setPasswordArray([...passwordArray, { ...form, id: uuidv4() }])
-            localStorage.setItem("passwords", JSON.stringify([...passwordArray, { ...form, id: uuidv4() }]))
-            setForm({ website: "", username: "", password: "" })
-
-            toast('Password saved', {
-                position: "top-left",
-                autoClose: 1000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                transition: "Bounce"
-            });
+        if (form.website && form.username && form.password) {
+            const newPassword = { ...form, id: uuidv4() };
+            setPasswordArray([...passwordArray, newPassword]);
+            setForm({ website: '', username: '', password: '' });
+            toast.success('Password saved successfully!', { position: 'top-left', autoClose: 1000 });
+        } else {
+            toast.error('All fields are required!', { position: 'top-left', autoClose: 2000 });
         }
-
-        console.log(passwordArray)
-    }
+    };
 
     const deletePassword = (id) => {
-            setPasswordArray(passwordArray.filter(item=>item.id!== id))
-            localStorage.setItem("passwords", JSON.stringify(passwordArray.filter(item=>item.id!== id)))
-
-            toast('Password Deleted', {
-                position: "top-left",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                transition: "Bounce"
-            });
-    }
+        const updatedPasswords = passwordArray.filter((item) => item.id !== id);
+        setPasswordArray(updatedPasswords);
+        toast.info('Password deleted!', { position: 'top-left', autoClose: 1000 });
+    };
 
     const editPassword = (id) => {
         setForm(passwordArray.filter(i => i.id === id)[0])
@@ -80,19 +58,9 @@ const Manager = () => {
     }
 
     const copyText = (text) => {
-        navigator.clipboard.writeText(text)
-        toast('Text Copied', {
-            position: "top-left",
-            autoClose: 4000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            transition: "Bounce"
-        });
-    }
+        navigator.clipboard.writeText(text);
+        toast.info('Copied to clipboard!', { position: 'top-left', autoClose: 1000 });
+    };
 
 
 
