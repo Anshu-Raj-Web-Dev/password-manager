@@ -88,11 +88,11 @@ const Manager = () => {
                 <div className="title">Your own Password Manager</div>
 
                 <div className='inputs'>
-                    <input value={form.website} onChange={handleChange} type="text" name='website' placeholder='Website' />
+                    <input value={form.website} onChange={handleChange} type="text" name='website' id="website" placeholder='Website' />
                     <div className="username-password">
-                        <input value={form.username} onChange={handleChange} type="text" name='username' placeholder='Username' />
+                        <input value={form.username} onChange={handleChange} type="text" name='username' id="username" placeholder='Username' />
                         <div className="relative">
-                            <input value={form.password} onChange={handleChange} ref={passwordRef} type="password" name='password' placeholder='Password' />
+                            <input value={form.password} onChange={handleChange} ref={passwordRef} type="password" name='password' id="password" placeholder='Password' />
                             <span className='show-hide' onClick={showPassword}>
                                 <img ref={ref} src="icons/hide-btn.png" width={25} />
                             </span>
