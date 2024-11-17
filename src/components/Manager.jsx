@@ -156,15 +156,16 @@ const [selectedPasswordId, setSelectedPasswordId] = useState(null);
                         </ul>
                     </div>
                 </div>}
+            
+)}
+
+        </div>
             {showPopup && (
     <div className="popup">
         <h1>Are you sure you want to delete this password?</h1>
         <button className="yes" onClick={deletePassword}>Yes</button>
         <button className="cancel" onClick={() => setShowPopup(false)}>Cancel</button>
     </div>
-)}
-
-        </div>
             </>
     )
 }
