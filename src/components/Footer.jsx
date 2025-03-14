@@ -6,8 +6,7 @@ const Footer = () => {
     <div className='container'>
       <h1>Password Manager
       <img className='foot-pass-png' src="icons/password.png" width={40}/>
-        </h1>        
-      <h4>Created by Chotu</h4>
+        </h1>       
     </div>
   )
 }
